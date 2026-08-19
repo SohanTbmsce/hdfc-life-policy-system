@@ -44,7 +44,7 @@ public class Main {
 
         // 6. Lookup of a policy detail
 
-        System.out.print("\n lookup of policy - HDFC-LIFE-1003 : ");
+        System.out.print("\n lookup of policy - HDFC-LIFE-1004 : ");
         System.out.println(policyStore.findByPolicyNumber("HDFC-LIFE-1003").getCustomer());
 
         // 7. printing the policies in the sorted order
@@ -58,8 +58,8 @@ public class Main {
 
         System.out.println("\nThe premium amount to be paid for the respective policies with base amount 42000 are as follows : ");
         System.out.println("  ULIP Premium : " + new PremiumCalculator(new UlipPremuimStrategy()).calculate(42000));
-        System.out.println("  ULIP Premium : " + new PremiumCalculator(new TermPremiumStrategy()).calculate(42000));
-        System.out.println("  ULIP Premium : " + new PremiumCalculator(new EndowmentStrategy()).calculate(27000));
+        System.out.println("  TERM Premium : " + new PremiumCalculator(new TermPremiumStrategy()).calculate(42000));
+        System.out.println("  ENDOWMENT Premium : " + new PremiumCalculator(new EndowmentStrategy()).calculate(27000));
 
         // 9. Observer pattern Lookup
 
